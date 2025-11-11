@@ -10,6 +10,7 @@ cd "${src_root}"
 no_std_crates=(
   -p solana-address
   -p solana-account-view
+  -p solana-bincode
   -p solana-blake3-hasher
   -p solana-clock
   -p solana-commitment-config

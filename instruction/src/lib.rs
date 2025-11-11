@@ -204,7 +204,7 @@ impl Instruction {
         data: &T,
         accounts: Vec<AccountMeta>,
     ) -> Self {
-        let data = bincode::serialize(data).unwrap();
+        let data = bincode::serde::encode_to_vec(data, bincode::config::legacy()).unwrap();
         Self {
             program_id,
             accounts,
